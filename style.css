@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+canvas {
+    background-color: #2e2ebf;
+    margin: 20px;
+}
+
+#fields {
+    margin-top: 20px;
+}
+
+#startGame {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.centerHorizontalFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.centerHorizontal {
+    margin: 0 auto;
+}
+
+#friendId {
+    width: 70%;
+}
+
+canvas.disabled {
+    background-color: rgb(102, 100, 100);
+}

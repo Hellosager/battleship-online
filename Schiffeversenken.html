@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Schiffe versenken</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1 id="title">Schiffe versenken</h1>
+
+
+    <div class="centerHorizontalFlex">
+        <div class="centerHorizontal">
+            <div>
+                <label>Meine ID:</label>
+                <span id="myId">Keine ID</span>
+            </div>
+            <div>
+                <label for="friendId">Freunde-ID:</label>
+                <input id="friendId" type="text" onkeypress="connectToFriend(event)" />
+            </div>
+
+            <br />
+
+            <div id="ships">
+                <Button type="button" value="0" onclick="selectShip(event)">2er Schiff</Button>
+                <Button type="button" value="1" onclick="selectShip(event)">3er Schiff</Button>
+                <Button type="button" value="2" onclick="selectShip(event)">3er Schiff</Button>
+                <Button type="button" value="3" onclick="selectShip(event)">3er Schiff</Button>
+                <Button type="button" value="4" onclick="selectShip(event)">3er Schiff</Button>
+            </div>
+
+            <button id="startGame" onclick="startGame()">Spiel starten</button>
+
+        </div>
+        <div id="fields" class="centerHorizontal">
+            <canvas id="ourField" width="400" height="400"></canvas>
+            <canvas id="enemyField" class="disabled" width="400" height="400"></canvas>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
