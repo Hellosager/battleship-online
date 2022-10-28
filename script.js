@@ -167,6 +167,14 @@ function placeShip(event) {
         var fieldX = Math.floor(event.offsetX / fieldSize);
         var fieldY = Math.floor(event.offsetY / fieldSize);
 
+        // alte Position des Schiffs wieder auf water setzen
+        for(var field = 0; field < selectedShip.fields.length; field++) {
+            var x = selectedShip.fields[field].x;
+            var y = selectedShip.fields[field].y;
+
+            gameField[x][y] = water;
+        }
+
         selectedShip.fields = [];
         if (selectedShip.direction === up) {
             for (var y = fieldY; y < fieldY + selectedShip.length; y++) {
